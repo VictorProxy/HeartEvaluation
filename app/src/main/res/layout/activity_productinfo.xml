@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/banckground_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/actionbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e8e8e8" />
+
+    <LinearLayout
+        android:id="@+id/progressBar"
+        android:layout_width="fill_parent"
+        android:layout_height="70dip"
+        android:layout_gravity="center_vertical"
+        android:gravity="center">
+
+        <com.vgtech.common.view.progressbar.ProgressWheel xmlns:wheel="http://schemas.android.com/apk/res-auto"
+            android:id="@android:id/progress"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            wheel:matProg_barColor="@color/bg_title"
+            wheel:matProg_progressIndeterminate="true" />
+
+        <TextView
+            android:id="@+id/progress_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dip"
+            android:paddingLeft="6dip"
+            android:paddingTop="2dip"
+            android:text="@string/data_loading"
+            android:textColor="@color/diaphaneity_black" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/view_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/banckground_color"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:src="@mipmap/icon_heart" />
+
+                <TextView
+                    android:id="@+id/tv_subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="sssssssss"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    fresco:failureImage="@mipmap/banner"
+                    fresco:placeholderImage="@mipmap/banner"
+                    fresco:viewAspectRatio="1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#e8e8e8" />
+
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textColor="@color/comment_grey"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <SeekBar
+        android:id="@+id/music_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/btn_play"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_title_style"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/bot_icon_cp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="播放"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </LinearLayout>
+</LinearLayout>

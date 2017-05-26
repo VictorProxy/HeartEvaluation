@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@mipmap/icon_heart" />
+
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:visibility="gone"
+            android:id="@+id/img_subtitle"
+            android:layout_width="250px"
+            android:layout_height="165px"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/app_name"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:textColor="@color/comment_grey" />
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:visibility="gone"
+        android:id="@+id/img_desc"
+        android:layout_width="250px"
+        android:layout_height="165px"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/app_name"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e8e8e8" />
+
+    <com.vgtech.vancloud.ui.view.NoScrollListview
+        android:id="@+id/option_list"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/banckground_color"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/me_item_single" />
+
+    <EditText
+        android:id="@+id/et_answer"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_search"
+        android:gravity="center_vertical"
+        android:hint="输入答案"
+        android:padding="10dp" />
+
+</LinearLayout>

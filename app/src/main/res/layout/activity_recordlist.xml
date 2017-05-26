@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/banckground_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/actionbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/title_spit_line" />
+
+    <ListView
+        android:id="@+id/record_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:divider="@color/banckground_color"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/me_item_single" />
+</LinearLayout>

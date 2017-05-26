@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/banckground_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/actionbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e8e8e8" />
+    <com.vgtech.vancloud.ui.view.ViewPagerIndicator
+        android:id="@+id/indicator_vp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:highlight_color="@color/bg_title"
+        app:indicator_color="@color/bg_title"
+        app:indicator_height="3dp"
+        app:normal_color="@color/dark_gray" />
+
+    <com.vgtech.common.view.NoScrollViewPager
+        android:id="@+id/vp_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:background="@color/white" />
+</LinearLayout>

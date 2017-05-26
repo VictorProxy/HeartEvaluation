@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="out_line">#cccccc</color>
+    <color name="bg_title">#01d8b7</color>
+    <color name="bg_title_pressed">#999999</color>
+</resources>

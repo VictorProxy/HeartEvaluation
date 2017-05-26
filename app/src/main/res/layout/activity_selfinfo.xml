@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/banckground_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/actionbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e8e8e8" />
+
+    <RelativeLayout
+        android:id="@+id/btn_photo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/me_item_single">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="头像"
+            android:textColor="@color/text_black"
+            android:textSize="15sp" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:failureImage="@mipmap/user_photo_default_small"
+            fresco:placeholderImage="@mipmap/user_photo_default_small"
+            fresco:roundAsCircle="true"
+            fresco:roundedCornerRadius="180dp"
+            fresco:roundingBorderColor="#ffffffff"
+            fresco:roundingBorderWidth="2dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/me_item_single"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="姓名"
+            android:textColor="@color/text_black"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:maxLength="10"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:singleLine="true"
+            android:textColor="@color/comment_grey"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/me_item_single">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="性別"
+            android:textColor="@color/text_black"
+            android:textSize="15sp" />
+
+        <RadioGroup
+            android:id="@+id/rg_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_boy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="男"
+                android:textColor="@color/comment_grey"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_girl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="女"
+                android:textColor="@color/comment_grey"
+                android:textSize="15sp" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/me_item_single"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="年龄"
+            android:textColor="@color/text_black"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/tv_age"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:inputType="number"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:singleLine="true"
+            android:text="ssssss"
+            android:textColor="@color/comment_grey"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_text"
+        android:gravity="center"
+        android:text="保存个人资料"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>

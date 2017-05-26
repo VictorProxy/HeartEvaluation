@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/banckground_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/actionbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e8e8e8" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/banckground_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/messages_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:gravity="center_horizontal"
+            android:text="@string/nothing_record"
+            android:visibility="gone" />
+
+        <com.vgtech.common.view.swipemenu.SwipeMenuListView
+            android:id="@+id/messages_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:listSelector="@drawable/me_item_single" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+    dexOptions {
+        javaMaxHeapSize "2048M"
+    }
+    defaultConfig {
+        applicationId "com.heart.evaluation"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':libraries:common')
+    compile project(':libraries:Android-PullToRefresh')
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'org.roboguice:roboguice:2.0'
+    compile 'dnsjava:dnsjava:2.1.6'
+    compile 'com.android.support:multidex:1.0.0'
+    compile files('libs/activeandroid-3.1-SNAPSHOT.jar')
+    compile files('libs/asmack-android-8-4.0.6_vancloud.jar')
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.okhttp3:okhttp:3.8.0'
+    compile 'org.springframework.android:spring-android-rest-template:1.0.1.RELEASE'
+    compile files('libs/aspectjrt-1.8.0.jar')
+    compile files('libs/isoparser-1.0.5.jar')
+    compile files('libs/eventbus.jar')
+}

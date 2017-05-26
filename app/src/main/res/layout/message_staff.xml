@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/message_staff_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.vgtech.vancloud.ui.chat.FlowLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/message_staffViews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/banckground_color"
+            android:padding="19dp"
+            app:elementSpacing="7dp"
+            app:lineSpacing="7dp">
+
+            <RelativeLayout
+                android:layout_width="75dp"
+                android:layout_height="75dp">
+
+                <ImageView
+                    android:id="@+id/message_staff_add"
+                    android:layout_width="65dp"
+                    android:layout_marginTop="5dip"
+                    android:layout_height="65dp"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/wg_xx_middle_add_btn" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="75dp"
+                android:layout_height="75dp">
+
+                <ImageView
+                    android:id="@+id/message_staff_remove"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/wg_xx_middle_reduction_btn"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+        </com.vgtech.vancloud.ui.chat.FlowLayout>
+
+
+        <LinearLayout
+            android:id="@+id/btn_group_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/message_staff_clear_record">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/chat_name"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/message_staff_groupName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/wg_gz_next"
+                android:gravity="center_vertical|right"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/find_chats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/message_staff_clear_record"
+            android:drawableRight="@drawable/wg_gz_next"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="@string/find_chats"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/message_staff_clear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/message_staff_clear_record"
+            android:drawableRight="@drawable/wg_gz_next"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="@string/clear_chat_record"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+
+        <Button
+            android:id="@+id/message_staff_exit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/message_staff_exit_bg"
+            android:gravity="center"
+            android:text="@string/delete_and_exit"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</ScrollView>

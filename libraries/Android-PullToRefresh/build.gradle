@@ -1,0 +1,23 @@
+apply plugin: 'com.android.library'
+android {
+    //noinspection GroovyAssignabilityCheck
+    compileSdkVersion 22
+    //noinspection GroovyAssignabilityCheck
+    buildToolsVersion '22.0.1'
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 22
+    }
+    sourceSets.main {
+        manifest.srcFile 'AndroidManifest.xml'
+        java.srcDirs = ['src']
+        resources.srcDirs = ['src']
+        res.srcDirs = ['res']
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+}

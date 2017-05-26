@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Common</string>
+    <string name="register_name_digits">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="personal_cancle">取消</string>
+    <string name="imagecheck_toast">图片已被清理</string>
+    <string name="loading">正在载入</string>
+    <string name="comment">回复</string>
+    <string name="tab_home">首页</string>
+    <string name="tab_evaluation">测评</string>
+    <string name="tab_consultation">咨询</string>
+    <string name="tab_train">训练</string>
+    <string name="tab_me">我的</string>
+</resources>

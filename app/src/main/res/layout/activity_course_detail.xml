@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/banckground_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/actionbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e8e8e8" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/play_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff000000">
+
+            <com.vgtech.vancloud.utils.videoplayer.VideoPlayer
+                android:id="@+id/videoPlayer"
+                android:layout_width="match_parent"
+                android:layout_height="180dip" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/play_layout"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:padding="10dip"
+                android:text="支持格式：\n音频 AAC\n视频 H264\n宽高设置 16:9"
+                android:textColor="#ff0487fc"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/banckground_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@color/bg_title_bar"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/btn_search"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_search"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/search_grey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="请输入问题或专家名"
+                android:textColor="@color/comment_grey"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/banner_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:id="@+id/layout_viewager_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white">
+
+                        <com.vgtech.vancloud.ui.view.cycle.BaseViewPager
+                            android:id="@+id/viewPager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"></com.vgtech.vancloud.ui.view.cycle.BaseViewPager>
+
+                        <LinearLayout
+                            android:id="@+id/layout_viewpager_indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="@dimen/view_small_padding"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingBottom="@dimen/view_padding"
+                            android:paddingRight="@dimen/view_padding"></LinearLayout>
+                    </RelativeLayout>
+
+                </FrameLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:id="@+id/btn_icon_links_cp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/me_item_single"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:src="@mipmap/icon_links_cp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="心理测评"
+                        android:textColor="@color/text_black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_icon_links_zx"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/me_item_single"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:src="@mipmap/icon_links_zx" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="在线咨询"
+                        android:textColor="@color/text_black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_icon_links_xy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/me_item_single"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:src="@mipmap/icon_links_xy" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="心理学院"
+                        android:textColor="@color/text_black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_icon_links_ly"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/me_item_single"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:src="@mipmap/icon_links_ly" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="疗愈吧"
+                        android:textColor="@color/text_black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_counselor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="预约专家"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="一键预约，便捷更专业"
+                        android:textColor="@color/comment_grey"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_marginBottom="-30dp"
+                        android:layout_marginTop="-25dp"
+                        android:src="@drawable/yyzjbg" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/banckground_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/icon_title" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="本期推荐"
+                            android:textColor="@color/bg_title"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/counselor_item1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/me_item_single"
+                        android:visibility="invisible">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/usericon1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="@string/app_name"
+                            fresco:failureImage="@drawable/photo"
+                            fresco:placeholderImage="@drawable/photo"
+                            fresco:roundAsCircle="true"
+                            fresco:roundedCornerRadius="180dp" />
+
+                        <TextView
+                            android:id="@+id/tv_name1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/usericon1"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/usericon1"
+                            android:text="ssss"
+                            android:textColor="@color/text_black"
+                            android:textSize="15sp" />
+
+                        <RatingBar
+                            android:id="@+id/rating1"
+                            style="@style/RatingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_name1"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/usericon1"
+                            android:clickable="false"
+                            android:isIndicator="true"
+                            android:rating="2.5"
+                            android:stepSize="0.5" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/icon_next" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/banckground_color" />
+
+                    <RelativeLayout
+                        android:id="@+id/counselor_item2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/me_item_single"
+                        android:visibility="invisible">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/usericon2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="@string/app_name"
+                            fresco:failureImage="@drawable/photo"
+                            fresco:placeholderImage="@drawable/photo"
+                            fresco:roundAsCircle="true"
+                            fresco:roundedCornerRadius="180dp" />
+
+                        <TextView
+                            android:id="@+id/tv_name2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/usericon2"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/usericon2"
+                            android:text="ssss"
+                            android:textColor="@color/text_black"
+                            android:textSize="15sp" />
+
+                        <RatingBar
+                            android:id="@+id/rating2"
+                            style="@style/RatingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_name2"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/usericon2"
+                            android:clickable="false"
+                            android:isIndicator="true"
+                            android:rating="2.5"
+                            android:stepSize="0.5" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/icon_next" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/banckground_color" />
+
+            <LinearLayout
+                android:id="@+id/counselor_tip_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/me_item_single"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/icon_comment" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/banckground_color" />
+
+
+                <ViewFlipper
+                    android:id="@+id/flipper_scrollTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:flipInterval="5000"
+                    android:padding="5dip" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cp_title"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/me_item_single"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="7dp"
+                    android:src="@drawable/icon_title" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="本期推荐"
+                    android:textColor="@color/bg_title"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/icon_next"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <com.vgtech.vancloud.ui.view.NoScrollListview
+                android:id="@+id/cp_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="@color/banckground_color"
+                android:dividerHeight="1dp"
+                android:listSelector="@drawable/me_item_single" />
+
+            <TextView
+                android:id="@+id/btn_more_cp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/more_item_single"
+                android:gravity="center"
+                android:text="更多测评"
+                android:textColor="@color/comment_grey"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/tj_title"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/me_item_single"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="7dp"
+                    android:src="@drawable/icon_title" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="推荐阅读"
+                    android:textColor="@color/bg_title"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/icon_next"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <com.vgtech.vancloud.ui.view.NoScrollListview
+                android:id="@+id/tj_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="@color/banckground_color"
+                android:dividerHeight="1dp"
+                android:listSelector="@drawable/me_item_single" />
+
+            <TextView
+                android:id="@+id/btn_more_tj"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/more_item_single"
+                android:gravity="center"
+                android:text="更多美文"
+                android:textColor="@color/comment_grey"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
